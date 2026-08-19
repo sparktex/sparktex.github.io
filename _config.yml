@@ -1,59 +1,100 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# Jekyll Configuration File
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
-title: Sparktex
-description: >- # this means to ignore newlines until "baseurl:"
+## => Site Settings
+text_skin: default
+highlight_theme: default
+url     : "https://sparktex.github.io"
+baseurl : ""
+title   : Sparktex
+description: > # this means to ignore newlines until "baseurl:"
   Welcome to my site.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sparktex.github.io" # the base hostname & protocol for your site
-github_username:  sparktex
 
-# Pages listed here appear as tabs in the top nav, in this order.
-# The site title (top-left) already links to the home page, so it's
-# not listed again here.
-header_pages:
-  - blog.markdown
-  - latex.markdown
-  - projects.markdown
+## => Language and Timezone
+lang:
+timezone:
 
-# Build settings
-theme: minima
+## => Author and Social
+author:
+  type    :
+  name    : Sparktex
+  github  : sparktex
+
+## => GitHub Repository
+repository: sparktex/sparktex.github.io
+repository_tree: main
+
+## => Paths
+paths:
+  root    :
+  home    :
+  archive :
+  rss     :
+
+## => Post
+excerpt_separator: <!--more-->
+license: CC-BY-NC-4.0
+toc:
+  selectors:
+
+## => Markdown Enhancements
+mathjax: true
+mathjax_autoNumber: false
+mermaid:
+chart:
+
+## => Paginate
+paginate: 8
+paginate_path: /page:num
+
+## => Sources
+sources: unpkg
+
+## => Sharing
+sharing:
+  provider: false
+
+## => Comments
+comments:
+  provider: false
+
+## => Pageview
+pageview:
+  provider: false
+
+## => Search
+search:
+  provider: default
+
+## => Analytics
+analytics:
+  provider: false
+
+## => Build
+theme       : jekyll-text-theme
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      sharing: true
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_subscribe: false
+      pageview: false
+
+## => Plugins
 plugins:
   - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
