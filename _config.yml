@@ -25,6 +25,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sparktex.github.io" # the base hostname & protocol for your site
 github_username:  sparktex
 
+# Pages listed here appear as tabs in the top nav, in this order.
+# The site title (top-left) already links to the home page, so it's
+# not listed again here.
+header_pages:
+  - blog.markdown
+  - latex.markdown
+  - projects.markdown
+
 # Build settings
 theme: minima
 plugins:

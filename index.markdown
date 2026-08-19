@@ -1,6 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: page
 ---
+
+# Sparktex
+
+Welcome to my site. Use the tabs above to check out my blog, LaTeX notes, and projects.
