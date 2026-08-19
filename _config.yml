@@ -20,7 +20,7 @@
 
 title: Sparktex
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my site.
+  A collection of random things I find cool.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sparktex.github.io" # the base hostname & protocol for your site
 github_username:  sparktex
